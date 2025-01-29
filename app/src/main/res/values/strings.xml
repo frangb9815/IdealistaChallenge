@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Idealista Challenge Francisco Gaitan</string>
+    <string name="photo_position">%1$d / %2$d</string>
+    <string name="price">%1$d %2$s</string>
+    <string name="property_description_title">Descripción</string>
+    <string name="price_detail">Precio: %1$d %2$s</string>
+    <string name="address_detail">Latitud: %1$f, Longitud: %2$f</string>
+    <string name="rooms_detail">Nº de habitaciones: %1$d</string>
+    <string name="bathrooms_detail">Nº de baños: %1$d</string>
+    <string name="status_detail">Estado: %1$s</string>
+    <string name="energy_detail">Certificado energético: %1$s</string>
+</resources>

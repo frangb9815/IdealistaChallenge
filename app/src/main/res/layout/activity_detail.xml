@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/svData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/detail_item_bottom"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescriptionTitle"
+                style="@style/TextView.Bold.16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_title_margin"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                android:text="@string/property_description_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvImages"
+                tools:text="Descripción" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_title_margin"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionTitle"
+                tools:text="Venta.Piso A ESTRENAR. Almagro-Chamberí.En venta, un lujoso piso en la prestigiosa zona de Almagro, Madrid, de 241 m², completamente reformado por un renombrado estudio de arquitectura con acabados de alta calidad. La vivienda cuenta con cuatro habitaciones, cada una con baño en suite, y un total de cinco baños." />
+
+            <ImageView
+                android:id="@+id/ivPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/price_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivPrice"
+                app:layout_constraintStart_toEndOf="@id/ivPrice"
+                app:layout_constraintTop_toTopOf="@+id/ivPrice"
+                tools:text="200000€" />
+
+            <ImageView
+                android:id="@+id/ivAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/location_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPrice" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAddress"
+                app:layout_constraintStart_toEndOf="@id/ivAddress"
+                app:layout_constraintTop_toTopOf="@+id/ivAddress"
+                tools:text="Calle Ejemplo, 123" />
+
+            <ImageView
+                android:id="@+id/ivRooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/rooms_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivAddress" />
+
+            <TextView
+                android:id="@+id/tvRooms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivRooms"
+                app:layout_constraintStart_toEndOf="@id/ivRooms"
+                app:layout_constraintTop_toTopOf="@+id/ivRooms"
+                tools:text="Habitaciones: 3" />
+
+            <ImageView
+                android:id="@+id/ivBathrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/bathroom_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivRooms" />
+
+            <TextView
+                android:id="@+id/tvBathrooms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBathrooms"
+                app:layout_constraintStart_toEndOf="@id/ivBathrooms"
+                app:layout_constraintTop_toTopOf="@+id/ivBathrooms"
+                tools:text="Baños: 3" />
+
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/status_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivBathrooms" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivStatus"
+                app:layout_constraintStart_toEndOf="@id/ivStatus"
+                app:layout_constraintTop_toTopOf="@+id/ivStatus"
+                tools:text="Estado: a reformar" />
+
+            <ImageView
+                android:id="@+id/ivEnergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/list_item_price_margin"
+                android:importantForAccessibility="no"
+                android:src="@drawable/energy_tag"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivStatus" />
+
+            <TextView
+                android:id="@+id/tvEnergy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_item_price_margin"
+                android:layout_marginEnd="@dimen/list_item_title_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/ivEnergy"
+                app:layout_constraintStart_toEndOf="@id/ivEnergy"
+                app:layout_constraintTop_toTopOf="@+id/ivEnergy"
+                tools:text="Certificado energético: Tipo e" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

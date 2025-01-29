@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">175dp</dimen>
+    <dimen name="list_item_margin_bottom">23dp</dimen>
+    <dimen name="list_item_margin_top">16dp</dimen>
+    <dimen name="list_item_margin_start">16dp</dimen>
+    <dimen name="list_item_margin_end">16dp</dimen>
+    <dimen name="list_item_padding_bottom">15dp</dimen>
+    <dimen name="list_item_card_radius">8dp</dimen>
+    <dimen name="list_item_card_elevation">5dp</dimen>
+    <dimen name="list_item_photo_height">8dp</dimen>
+    <dimen name="list_item_title_margin">12dp</dimen>
+    <dimen name="list_item_price_margin">8dp</dimen>
+    <dimen name="photo_item_tag_padding_start">16dp</dimen>
+    <dimen name="photo_item_tag_padding_end">12dp</dimen>
+    <dimen name="photo_item_tag_margin_top">18dp</dimen>
+    <dimen name="photo_item_number_margin_end">-8dp</dimen>
+    <dimen name="detail_item_bottom">18dp</dimen>
+</resources>
